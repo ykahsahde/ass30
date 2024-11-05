@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con{
+            background-color: #c8baba;
+            border: 10px double rgb(111, 106, 71);
+            width: 300px;
+            border-radius: 10px;
+            margin: 20px auto;
+        }
+        .con>img{
+            padding: 10px 20px 10px 39px;
+        }
+       
+        .but1{
+            background-color: #af9d9d;
+            display: block;
+            margin: 6px auto;
+            padding: 10px 20px;
+            font-size:30px;
+            border-radius: 5px;
+
+        }
+        .imgadd{
+            height: 30px;
+            padding: 5px;
+            margin: 0px 5px;
+          
+        }
+        .cont{
+           display: flex;
+           justify-content: center;
+            
+        }
+        span{
+            font-size: 30px;
+        }
+        .pick{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="con">
+        <img src="poki2.png" alt="">
+        <div>
+            <h1 class="pick">Pikachu</h1>
+             <h2>price:$30</h2>
+        </div>
+        <div class="cont">
+            <img class="imgadd" onclick="inc()"  src="add.png" alt="">
+            <span id="quantity">1</span>
+            <img class="imgadd" onclick="dec()" src="minus.png" alt="">
+        </div>
+        <div class="con1">
+            <button class="but1" >Buy</button>
+    
+        </div>
+    </div>
+    
+    <script>
+        const lement=document.getElementById('quantity')
+        function inc(){
+           let quantity=parseInt(lement.innerText);
+           lement.innerText=++quantity;
+        }
+        function dec(){
+            let quantity=parseInt(lement.innerText);
+            if(quantity>1){
+                lement.innerText=--quantity;
+            }
+        }
+    </script>
+</body>
+</html>
